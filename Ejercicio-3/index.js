@@ -7,11 +7,7 @@ const logger = Logger.create('utils');
 array_numeros = [2, 3, 101, 201, 202, 100]
 
 for (let index = 0; index < array_numeros.length; index++) {
-    if(numeros.esPar(array_numeros[index])){
-        logger.info(`El número ${array_numeros[index]} es par`);
-    }else{
-        logger.error(`El número ${array_numeros[index]} no es par`);
-    }  
+    numeros.esPar(array_numeros[index]) ? logger.info(`El número ${array_numeros[index]} es par`) : logger.error(`El número ${array_numeros[index]} no es par`)
 }
 
 http.createServer((req, res) =>{
